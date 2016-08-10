@@ -23,9 +23,10 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageButton"
+                android:id="@+id/closetButton"
                 android:layout_weight="0.08"
-                android:src="@mipmap/closet_icon" />
+                android:src="@mipmap/closet_icon"
+                android:nestedScrollingEnabled="false" />
 
             <Space
                 android:layout_width="wrap_content"
