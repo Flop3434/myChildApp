@@ -26,7 +26,8 @@
                 android:id="@+id/closetButton"
                 android:layout_weight="0.08"
                 android:src="@mipmap/closet_icon"
-                android:nestedScrollingEnabled="false" />
+                android:nestedScrollingEnabled="false"
+                android:clickable="false" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -36,7 +37,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/imageButton2"
+                android:id="@+id/alertButton"
                 android:src="@mipmap/alert_icon" />
 
             <Space

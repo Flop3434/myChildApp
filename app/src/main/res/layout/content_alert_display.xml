@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.nutel.mychildapp.alert_display"
+    tools:showIn="@layout/activity_alert_display">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Schedule Alerts"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.08" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.16"
+            android:weightSum="1"
+            android:id="@+id/alertTimeInput">
+
+            <TextView
+                android:layout_width="115dp"
+                android:layout_height="37dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Alert Time"
+                android:id="@+id/textView3" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.96" />
+
+            <EditText
+                android:layout_width="97dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textOut" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.03"
+            android:id="@+id/alertInputLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Alert Type"
+                android:id="@+id/textView4" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="67dp"
+                android:layout_weight="0.59" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:id="@+id/alertSpinner"
+                android:layout_weight="0.16"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.04">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Duration (est)"
+                android:id="@+id/textView5" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.22" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:id="@+id/spinner"
+                android:layout_weight="0.08"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.26"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Days"
+                android:id="@+id/textView6" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="33dp"
+                android:layout_height="wrap_content"
+                android:text="S"
+                android:id="@+id/button" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:text="M"
+                android:id="@+id/button2" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="33dp"
+                android:layout_height="wrap_content"
+                android:text="T"
+                android:id="@+id/button3" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:text="W"
+                android:id="@+id/button4" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="37dp"
+                android:layout_height="wrap_content"
+                android:text="T"
+                android:id="@+id/button5" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:text="F"
+                android:id="@+id/button6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:text="S"
+                android:id="@+id/button7" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

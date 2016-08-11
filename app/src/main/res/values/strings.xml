@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">myChildApp</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_closet_display">closet_display</string>
+    <string name="title_activity_event_activity">event_activity</string>
+    <string name="title_activity_alert_display">alert_display</string>
 </resources>

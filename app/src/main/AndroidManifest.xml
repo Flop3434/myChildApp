@@ -18,7 +18,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity_day_view"></activity>
+        <activity android:name=".activity_day_view" />
+        <activity
+            android:name=".closet_display"
+            android:label="@string/title_activity_closet_display"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".event_activity"
+            android:label="@string/title_activity_event_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".alert_display"
+            android:label="@string/title_activity_alert_display"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
