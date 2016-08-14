@@ -94,7 +94,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.04">
+            android:layout_weight="0.04"
+            android:id="@+id/durationLayout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -121,8 +122,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.26"
-            android:weightSum="1">
+            android:layout_weight="0.08"
+            android:weightSum="1"
+            android:id="@+id/daysLayout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -184,6 +186,43 @@
                 android:layout_height="wrap_content"
                 android:text="S"
                 android:id="@+id/button7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.32"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:id="@+id/button8" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.60" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:id="@+id/button9" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.53" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/button10" />
         </LinearLayout>
 
     </LinearLayout>
