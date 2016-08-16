@@ -11,22 +11,27 @@ import android.support.v7.widget.Toolbar;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
 
-public class alert_display extends AppCompatActivity {
+public class event_display extends AppCompatActivity {
 
-    static EditText TimeText;
+    private static RadioGroup radioButtonGroup;
+    private static RadioButton selectedRadioButton;
+    private static EditText TimeText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alert_display);
+        setContentView(R.layout.activity_event_display);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Set up the radio buttons for each event
+        radioButtonGroup = (RadioGroup)findViewById(R.id.radio_group_events);
 
         // Create time picker dialogue
         TimeText = (EditText) findViewById((R.id.text_time));

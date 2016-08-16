@@ -48,7 +48,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/imageButton3"
+                android:id="@+id/eventButton"
                 android:src="@mipmap/setting_gear" />
         </LinearLayout>
 

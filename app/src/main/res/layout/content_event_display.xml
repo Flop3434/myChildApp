@@ -9,8 +9,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.nutel.mychildapp.alert_display"
-    tools:showIn="@layout/activity_alert_display">
+    tools:context=".event_display"
+    tools:showIn="@layout/activity_event_display">
 
     <LinearLayout
         android:orientation="vertical"
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Schedule Alerts"
+            android:text="Add an Event"
             android:id="@+id/textView2"
             android:layout_gravity="center_horizontal" />
 
@@ -68,119 +68,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.03"
-            android:id="@+id/alertInputLayout">
+            android:weightSum="1">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Alert Type"
-                android:id="@+id/textView4" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="67dp"
-                android:layout_weight="0.59" />
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="53dp"
-                android:id="@+id/alertSpinner"
-                android:layout_weight="0.16"
-                android:spinnerMode="dropdown" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.04"
-            android:id="@+id/durationLayout">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Duration (est)"
-                android:id="@+id/textView5" />
+                android:id="@+id/textView10" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.22" />
+                android:layout_weight="0.43" />
 
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="53dp"
-                android:id="@+id/spinner"
-                android:layout_weight="0.08"
-                android:spinnerMode="dropdown" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.08"
-            android:weightSum="1"
-            android:id="@+id/daysLayout">
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.33" />
-
-            <CheckBox
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/checkBox"
-                android:checked="false" />
+                android:orientation="vertical"
+                android:id="@+id/radio_group_events">
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="M"
-                android:id="@+id/checkBox2"
-                android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bottle"
+                    android:id="@+id/radioButton"
+                    android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="T"
-                android:id="@+id/checkBox3"
-                android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fed"
+                    android:id="@+id/radioButton2"
+                    android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="W"
-                android:id="@+id/checkBox4"
-                android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Changed"
+                    android:id="@+id/radioButton3"
+                    android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="T"
-                android:id="@+id/checkBox5"
-                android:checked="false" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="F"
-                android:id="@+id/checkBox6"
-                android:checked="false" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/checkBox7"
-                android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nap"
+                    android:id="@+id/radioButton4"
+                    android:checked="false" />
+            </RadioGroup>
 
         </LinearLayout>
 
@@ -189,14 +124,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.32"
+            android:layout_weight="0"
             android:weightSum="1">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Submit"
-                android:id="@+id/button8" />
+                android:id="@+id/button_submit" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -207,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Clear"
-                android:id="@+id/button9" />
+                android:id="@+id/button_clear" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -218,8 +153,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cancel"
-                android:id="@+id/button10" />
+                android:id="@+id/button_cancel" />
         </LinearLayout>
 
     </LinearLayout>
+
 </RelativeLayout>

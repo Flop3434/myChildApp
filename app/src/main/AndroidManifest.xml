@@ -24,7 +24,7 @@
             android:label="@string/title_activity_closet_display"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".event_activity"
+            android:name=".event_display"
             android:label="@string/title_activity_event_activity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

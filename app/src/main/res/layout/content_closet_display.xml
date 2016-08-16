@@ -60,7 +60,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText"
-                android:layout_weight="0.36" />
+                android:layout_weight="0.36"
+                android:inputType="number" />
         </LinearLayout>
 
         <Space
@@ -95,7 +96,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="53dp"
                 android:id="@+id/editText2"
-                android:layout_weight="0.39" />
+                android:layout_weight="0.36"
+                android:inputType="number" />
         </LinearLayout>
 
         <Space
@@ -129,7 +131,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText3"
-                android:layout_weight="0.90" />
+                android:layout_weight="0.90"
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
