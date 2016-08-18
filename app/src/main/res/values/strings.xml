@@ -4,4 +4,10 @@
     <string name="title_activity_closet_display">closet_display</string>
     <string name="title_activity_event_activity">event_activity</string>
     <string name="title_activity_alert_display">alert_display</string>
+    <string-array name = "alert_types">
+        <item>Bottle</item>
+        <item>Feed</item>
+        <item>Change</item>
+        <item>Nap</item>
+    </string-array>
 </resources>
