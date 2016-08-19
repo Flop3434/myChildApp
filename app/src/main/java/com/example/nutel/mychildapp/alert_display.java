@@ -2,6 +2,7 @@ package com.example.nutel.mychildapp;
 
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -21,6 +23,7 @@ public class alert_display extends AppCompatActivity implements AdapterView.OnIt
 
     static EditText TimeText;
     Spinner alertTypeSpinner;
+    public Button cancelButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,15 @@ public class alert_display extends AppCompatActivity implements AdapterView.OnIt
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.alert_types, android.R.layout.simple_spinner_item);
         alertTypeSpinner.setAdapter((adapter));
         alertTypeSpinner.setOnItemSelectedListener(this);
+
+        cancelButton = (Button)findViewById(R.id.cancelButton);
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(alert_display.this, activity_day_view.class));
+            }
+        });
 
     }
 

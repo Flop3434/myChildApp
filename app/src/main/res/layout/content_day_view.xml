@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/listView"
             android:layout_gravity="center_horizontal"
-            android:textAlignment="center" />
+            android:gravity="center" />
 
     </LinearLayout>
 </RelativeLayout>
