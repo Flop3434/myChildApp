@@ -85,21 +85,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
-                        android:id="@+id/button" />
+                        android:id="@+id/button_dec_diapers" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/editText"
+                        android:id="@+id/text_diapers"
                         android:layout_weight="1"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textAlignment="center" />
 
                     <Button
                         style="?android:attr/buttonStyleSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="+"
-                        android:id="@+id/button2" />
+                        android:id="@+id/button_inc_diapers" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -114,21 +115,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
-                        android:id="@+id/button3" />
+                        android:id="@+id/button_dec_wipes" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/editText2"
+                        android:id="@+id/text_wipes"
                         android:layout_weight="1"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textAlignment="center" />
 
                     <Button
                         style="?android:attr/buttonStyleSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="+"
-                        android:id="@+id/button4" />
+                        android:id="@+id/button_inc_wipes" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -143,21 +145,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
-                        android:id="@+id/button5" />
+                        android:id="@+id/button_dec_ointments" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/editText3"
+                        android:id="@+id/text_ointments"
                         android:layout_weight="1"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textAlignment="center" />
 
                     <Button
                         style="?android:attr/buttonStyleSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="+"
-                        android:id="@+id/button6" />
+                        android:id="@+id/button_inc_ointments" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -178,7 +181,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cancel"
+                android:text="@string/button_cancel"
                 android:id="@+id/backButton"
                 android:layout_weight="0.11" />
 
@@ -190,7 +193,7 @@
             <Button
                 android:layout_width="143dp"
                 android:layout_height="wrap_content"
-                android:text="Finish"
+                android:text="@string/button_finish"
                 android:id="@+id/button12"
                 android:layout_weight="0.09" />
         </LinearLayout>
