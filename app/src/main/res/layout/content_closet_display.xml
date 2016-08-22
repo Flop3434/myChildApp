@@ -193,8 +193,8 @@
             <Button
                 android:layout_width="143dp"
                 android:layout_height="wrap_content"
-                android:text="@string/button_finish"
-                android:id="@+id/button12"
+                android:text="Done"
+                android:id="@+id/closetDoneButton"
                 android:layout_weight="0.09" />
         </LinearLayout>
 

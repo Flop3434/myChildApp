@@ -24,7 +24,7 @@ public class event_display extends AppCompatActivity {
     private static RadioGroup radioButtonGroup;
     private static RadioButton selectedRadioButton;
     private static EditText textDate, textTime;
-    public Button buttonCancel;
+    public Button buttonCancel, buttonSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +58,17 @@ public class event_display extends AppCompatActivity {
         buttonCancel = (Button)findViewById(R.id.button_cancel);
 
         buttonCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(event_display.this, activity_day_view.class));
+            }
+        });
+
+        buttonSubmit = (Button)findViewById(R.id.button_submit);
+        // Create Submit button
+        //TODO this will need to input 2 string values and a bool that will save to a local data base
+        // values are str Date, str Time, and bool Event type
+        buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(event_display.this, activity_day_view.class));

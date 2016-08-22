@@ -13,7 +13,8 @@ public class closet_display extends AppCompatActivity {
 
     public Button buttonCancel,
             buttonDecDiapers, buttonDecWipes, buttonDecOintments,
-            buttonIncDiapers, buttonIncWipes, buttonIncOintments;
+            buttonIncDiapers, buttonIncWipes, buttonIncOintments,
+            buttonDone;
     public EditText textDiapers, textWipes, textOintments;
     public int numDiapers, numWipes, numOintments;
 
@@ -104,6 +105,18 @@ public class closet_display extends AppCompatActivity {
         buttonCancel = (Button)findViewById(R.id.backButton);
 
         buttonCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(closet_display.this, activity_day_view.class));
+            }
+        });
+
+        //Create Done button
+        // TODO this will need to input 3 int values that will save to a local data base
+        // values are int diapers, int wipes, and int ointments
+        buttonDone = (Button) findViewById(R.id.closetDoneButton);
+
+        buttonDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(closet_display.this, activity_day_view.class));
