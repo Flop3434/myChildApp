@@ -13,6 +13,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    DatabaseHelper myChildDb;
     public Button butStart;
 
     @Override
@@ -32,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, activity_day_view.class));
             }
         });
+
+        // Create the database
+        myChildDb = new DatabaseHelper(this);
     }
 
     @Override
