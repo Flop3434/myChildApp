@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CalendarView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class activity_day_view extends AppCompatActivity {
 
@@ -20,6 +22,8 @@ public class activity_day_view extends AppCompatActivity {
     ImageButton closetimagebutton;
     ImageButton alertimagebutton;
     ImageButton eventimagebutton;
+
+    CalendarView calendar;
 
 
 
@@ -62,6 +66,13 @@ public class activity_day_view extends AppCompatActivity {
             }
         });
 
+        calendar = (CalendarView) findViewById(R.id.calendar);
+        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener(){
+            @Override
+            public void onSelectedDayChange(CalendarView view,int year,int month,int dayOfMonth) {
+                Toast.makeText(getApplicationContext(),dayOfMonth + "/" + month + "/" + year, Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 }
