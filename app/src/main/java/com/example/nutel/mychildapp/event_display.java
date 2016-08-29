@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TimePicker;
@@ -21,9 +22,11 @@ import java.util.Calendar;
 
 public class event_display extends AppCompatActivity {
 
+    // Layout elements
     private static RadioGroup radioButtonGroup;
     private static RadioButton selectedRadioButton;
-    private static EditText textDate, textTime;
+    private static EditText textDate, textTime, textDuration;
+    private static LinearLayout layoutDuration;
     public Button buttonCancel, buttonSubmit;
 
     @Override
@@ -51,12 +54,26 @@ public class event_display extends AppCompatActivity {
             }
         });
 
+        // Create duration linear layout and text view
+        layoutDuration = (LinearLayout) findViewById((R.id.layout_duration));
+        textDuration = (EditText) findViewById((R.id.text_duration));
+
         // Set up the radio buttons for each event
         radioButtonGroup = (RadioGroup)findViewById(R.id.radio_group_events);
+        // If "Nap" radio button is NOT selected, don't show the duration dialogue
+        radioButtonGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (radioButtonGroup.getCheckedRadioButtonId() != R.id.radioNap) {
+                    layoutDuration.setVisibility(View.INVISIBLE);
+                } else {
+                    layoutDuration.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
         // Create Back button
         buttonCancel = (Button)findViewById(R.id.button_cancel);
-
         buttonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,8 +81,8 @@ public class event_display extends AppCompatActivity {
             }
         });
 
-        buttonSubmit = (Button)findViewById(R.id.button_submit);
         // Create Submit button
+        buttonSubmit = (Button)findViewById(R.id.button_done);
         //TODO this will need to input 2 string values and a bool that will save to a local data base
         // values are str Date, str Time, and bool Event type
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +93,8 @@ public class event_display extends AppCompatActivity {
         });
 
     }
+
+
 
     public void showDatePickerDialog(View v) {
         DialogFragment newFragment = new DatePickerFragment();

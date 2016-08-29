@@ -5,7 +5,7 @@
     <string name="title_activity_event_activity">Add Event</string>
     <string name="title_activity_alert_display">Schedule Alert</string>
     <string name="button_cancel">Cancel</string>
-    <string name="button_finish">Finish</string>
+    <string name="button_done">Done</string>
     <string-array name = "alert_types">
         <item>Bottle</item>
         <item>Feed</item>

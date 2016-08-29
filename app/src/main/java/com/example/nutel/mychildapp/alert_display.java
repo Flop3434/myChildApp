@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -21,9 +22,17 @@ import java.util.Calendar;
 
 public class alert_display extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    static EditText TimeText;
-    Spinner alertTypeSpinner;
-    public Button cancelButton;
+    // Layout elements
+    private static EditText textTime, textEstDuration;
+    private static Spinner spinnerType;
+    private static Button buttonCancel;
+    private static LinearLayout layoutDuration;
+
+    // Constants
+    private static final int BOTTLE = 0;
+    private static final int FEED = 1;
+    private static final int CHANGE = 2;
+    private static final int NAP = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,24 +42,43 @@ public class alert_display extends AppCompatActivity implements AdapterView.OnIt
         setSupportActionBar(toolbar);
 
         // Create time picker dialogue
-        TimeText = (EditText) findViewById((R.id.text_time));
-        TimeText.setOnClickListener( new View.OnClickListener() {
+        textTime = (EditText) findViewById((R.id.text_time));
+        textTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showTimePickerDialog(v);
             }
         });
 
+        // Create duration linear layout and text view
+        layoutDuration = (LinearLayout) findViewById((R.id.layout_duration));
+        textEstDuration = (EditText) findViewById((R.id.text_est_duration));
+
         // Create the spinner
-        alertTypeSpinner = (Spinner) findViewById(R.id.alertSpinner);
-
+        spinnerType = (Spinner) findViewById(R.id.alertSpinner);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.alert_types, android.R.layout.simple_spinner_item);
-        alertTypeSpinner.setAdapter((adapter));
-        alertTypeSpinner.setOnItemSelectedListener(this);
+        spinnerType.setAdapter((adapter));
+        spinnerType.setOnItemSelectedListener(this);
+        // If "Nap" radio button is NOT selected, don't show the duration dialogue
+        spinnerType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View view, int position, long id) {
+                if (position != NAP) {
+                    layoutDuration.setVisibility(View.INVISIBLE);
+                } else {
+                    layoutDuration.setVisibility(View.VISIBLE);
+                }
+            }
 
-        cancelButton = (Button)findViewById(R.id.cancelButton);
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
 
-        cancelButton.setOnClickListener(new View.OnClickListener() {
+            }
+        });
+        
+        // Create cancel button
+        buttonCancel = (Button)findViewById(R.id.button_cancel);
+        buttonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(alert_display.this, activity_day_view.class));
@@ -90,7 +118,7 @@ public class alert_display extends AppCompatActivity implements AdapterView.OnIt
 
         @Override
         public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
-            TimeText.setText(String.format("%02d",hourOfDay) + ":" + String.format("%02d",minute));
+            textTime.setText(String.format("%02d",hourOfDay) + ":" + String.format("%02d",minute));
         }
 
     }

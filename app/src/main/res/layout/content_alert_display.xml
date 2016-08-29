@@ -20,35 +20,20 @@
         android:layout_centerHorizontal="true"
         android:weightSum="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Schedule Alerts"
-            android:id="@+id/textView2"
-            android:layout_gravity="center_horizontal" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.08" />
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.16"
             android:weightSum="1"
-            android:id="@+id/alertTimeInput">
+            android:id="@+id/alertTimeInput"
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="115dp"
                 android:layout_height="37dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Alert Time"
-                android:id="@+id/textView3" />
+                android:text="Alert Time" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -68,15 +53,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.03"
-            android:id="@+id/alertInputLayout">
+            android:id="@+id/alertInputLayout"
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Alert Type"
-                android:id="@+id/textView4" />
+                android:text="Alert Type" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -85,9 +69,8 @@
 
             <Spinner
                 android:layout_width="wrap_content"
-                android:layout_height="53dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/alertSpinner"
-                android:layout_weight="0.16"
                 android:spinnerMode="dropdown" />
         </LinearLayout>
 
@@ -95,108 +78,117 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/layout_duration"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.04"
-            android:id="@+id/durationLayout">
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Duration (est)"
-                android:id="@+id/textView5" />
+                android:text="Duration (Est.)" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.22" />
+                android:layout_weight="0.40" />
 
-            <Spinner
+            <EditText
                 android:layout_width="wrap_content"
-                android:layout_height="53dp"
-                android:id="@+id/spinner"
-                android:layout_weight="0.08"
-                android:spinnerMode="dropdown" />
+                android:layout_height="wrap_content"
+                android:id="@+id/text_est_duration"
+                android:layout_weight="0.55"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Hours" />
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.08"
             android:weightSum="1"
-            android:id="@+id/daysLayout">
+            android:id="@+id/daysLayout"
+            android:gravity="center_horizontal"
+            android:padding="10dp">
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.33" />
-
-            <CheckBox
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/checkBox"
-                android:checked="false" />
+                android:id="@+id/linearLayout2">
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="M"
-                android:id="@+id/checkBox2"
-                android:checked="false" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S"
+                    android:id="@+id/checkbox_sunday"
+                    android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="T"
-                android:id="@+id/checkBox3"
-                android:checked="false" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="M"
+                    android:id="@+id/checkbox_monday"
+                    android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="W"
-                android:id="@+id/checkBox4"
-                android:checked="false" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="T"
+                    android:id="@+id/checkbox_tuesday"
+                    android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="T"
-                android:id="@+id/checkBox5"
-                android:checked="false" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="W"
+                    android:id="@+id/checkbox_wednesday"
+                    android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="F"
-                android:id="@+id/checkBox6"
-                android:checked="false" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="T"
+                    android:id="@+id/checkbox_thursday"
+                    android:checked="false" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/checkBox7"
-                android:checked="false" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="F"
+                    android:id="@+id/checkbox_friday"
+                    android:checked="false" />
 
-        </LinearLayout>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S"
+                    android:id="@+id/checkbox_saturday"
+                    android:checked="false" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.32"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:padding="10dp">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cancel"
-                android:id="@+id/cancelButton" />
+                android:id="@+id/button_cancel" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -217,8 +209,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Finish"
-                android:id="@+id/button10" />
+                android:text="@string/button_done"
+                android:id="@+id/button_done" />
         </LinearLayout>
 
     </LinearLayout>

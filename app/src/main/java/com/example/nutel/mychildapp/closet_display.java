@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class closet_display extends AppCompatActivity {
 
+    // Layout elements
     public Button buttonCancel,
             buttonDecDiapers, buttonDecWipes, buttonDecOintments,
             buttonIncDiapers, buttonIncWipes, buttonIncOintments,
@@ -102,8 +103,7 @@ public class closet_display extends AppCompatActivity {
         });
 
         // Create Back button
-        buttonCancel = (Button)findViewById(R.id.backButton);
-
+        buttonCancel = (Button)findViewById(R.id.button_cancel);
         buttonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,7 +114,7 @@ public class closet_display extends AppCompatActivity {
         //Create Done button
         // TODO this will need to input 3 int values that will save to a local data base
         // values are int diapers, int wipes, and int ointments
-        buttonDone = (Button) findViewById(R.id.closetDoneButton);
+        buttonDone = (Button) findViewById(R.id.button_done);
 
         buttonDone.setOnClickListener(new View.OnClickListener() {
             @Override

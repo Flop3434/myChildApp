@@ -20,35 +20,20 @@
         android:layout_centerHorizontal="true"
         android:weightSum="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Add an Event"
-            android:id="@+id/textView2"
-            android:layout_gravity="center_horizontal" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.08" />
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.16"
             android:weightSum="1"
-            android:id="@+id/linearLayout" >
+            android:id="@+id/linearLayout"
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="115dp"
                 android:layout_height="37dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Event Date"
-                android:id="@+id/textView9" />
+                android:text="Event Date" />
 
             <EditText
                 android:layout_width="fill_parent"
@@ -63,16 +48,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.16"
             android:weightSum="1"
-            android:id="@+id/alertTimeInput">
+            android:id="@+id/alertTimeInput"
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="115dp"
                 android:layout_height="37dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Event Time"
-                android:id="@+id/textView3" />
+                android:text="Event Time" />
 
             <EditText
                 android:layout_width="fill_parent"
@@ -88,14 +72,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Event Type"
-                android:id="@+id/textView10" />
+                android:text="Event Type" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -112,28 +96,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bottle"
-                    android:id="@+id/radioButton"
+                    android:id="@+id/radioBottle"
                     android:checked="false" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fed"
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/radioFed"
                     android:checked="false" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Changed"
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/radioChanged"
                     android:checked="false" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nap"
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/radioNap"
                     android:checked="false" />
             </RadioGroup>
 
@@ -143,9 +127,45 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:weightSum="1"
+            android:id="@+id/layout_duration"
+            android:visibility="invisible"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Duration"
+                android:id="@+id/textView" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.50" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_duration"
+                android:layout_weight="0.50"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Hours" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:padding="10dp">
 
             <Button
                 android:layout_width="wrap_content"
@@ -156,7 +176,7 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.60"
+                android:layout_weight="0.5"
                 android:nestedScrollingEnabled="true" />
 
             <Button
@@ -168,13 +188,13 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.53" />
+                android:layout_weight="0.5" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_finish"
-                android:id="@+id/button_submit" />
+                android:text="@string/button_done"
+                android:id="@+id/button_done" />
         </LinearLayout>
 
     </LinearLayout>
