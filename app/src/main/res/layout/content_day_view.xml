@@ -19,7 +19,8 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="46dp"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:background="#fd9494">
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -33,7 +34,8 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.50" />
+                android:layout_weight="0.50"
+                android:background="#fd9494" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -44,7 +46,8 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.47" />
+                android:layout_weight="0.47"
+                android:background="#fd9494" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -63,7 +66,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/listView"
             android:layout_gravity="center_horizontal"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textAlignment="center"/>
 
     </LinearLayout>
 </RelativeLayout>
